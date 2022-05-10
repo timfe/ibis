@@ -7,7 +7,7 @@
 
 ```02_create_nifti.ipynb```
 - Helper file to convert DICOMs to NIFTIs using dcm2niix
-- PLEASE NOTE: THE SCRIPT DELETES ALL FOLDERS EXCEPT ""RESTING-STATE"" AND ""sT1W_3D_TFE_SENSE"" TO SAVE DISK SPACE !!!!
+- PLEASE NOTE: THE SCRIPT DELETES ALL FOLDERS EXCEPT ```RESTING-STATE``` AND ```sT1W_3D_TFE_SENSE``` TO SAVE DISK SPACE !!!!
 - Also enables automatic transfer of the T1w Images to the target folder for DPABI: ```T1Img```. Note: This is commented and thus deactivated by default.
 - Input: 
   - base_path -> String: Path to DICOMS which is the outputDir from ```01_extract_data.ipynb```.

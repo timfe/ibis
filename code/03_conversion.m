@@ -1,16 +1,16 @@
 clear all; clc
 
 base_path = '/Volumes/Data/projects/ibis/analysis/data';
+output_path = '/Volumes/Data/projects/ibis/analysis/DPARSF/FunRaw/';
 folder_pattern = fullfile(base_path, '/IN*');
 folders = dir(folder_pattern);
 subjects = {folders.name};
 
 for i = 1:length(subjects)
     subject = char(subjects(i));
-    outputPath = strcat('/Volumes/Data/projects/ibis/analysis/DPARSF/FunRaw/', subject);
+    outputPath = strcat(output_path, subject);
     subjectFolder = fullfile(base_path, subject);
     funFolder = fullfile(subjectFolder, 'RESTING-STATE');
-    sprintf('Processing subject: %s', subject);
     if isfolder(funFolder) && not(isfolder(outputPath))
         mkdir(outputPath);
         try

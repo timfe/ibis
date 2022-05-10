@@ -1,6 +1,6 @@
 clear all; clc
 
-base_path = '/Volumes/Data/projects/ibis/analysis/data';
+base_path = '/Volumes/Data/projects/ibis/data/NIFTI';
 output_path = '/Volumes/Data/projects/ibis/analysis/DPARSF/FunRaw/';
 folder_pattern = fullfile(base_path, '/IN*');
 folders = dir(folder_pattern);

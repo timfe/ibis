@@ -20,6 +20,6 @@
   - outputPath -> String: Target folder for the converted NIFTIs. This should also be the base folder for DPABI Toolbox ending ```FunImg```
 
 Continue in DPABI: 
-- Make sure the 4D functional images are saved in a folder ```funImg``` and the T1w structural images are saved in ```T1Img```. This is MANDATORY!
+- Make sure the 4D functional images are saved in a folder ```FunImg``` and the T1w structural images are saved in ```T1Img```. This is MANDATORY!
 - These folders should contain one folder per subject
 - See [this document](http://d.rnet.co/Course/V3.0EN/4_R-fMRI_Data_Processing_DPARSFA.pdf) on [rfmri.org/Course](http://rfmri.org/Course) for more information.

@@ -1,6 +1,6 @@
 clear all; clc
 
-base_path = '/Volumes/Data/projects/ibis/analysis/DPARSF_PD/N13';
+base_path = '/Volumes/Data/projects/ibis/analysis/DPARSF_test/N13';
 
 subjectsDir = dir((fullfile(base_path, 'FunImgAR', 'IN*')));
 
@@ -18,14 +18,14 @@ subjects = {subjectsDir.name};
         src = fullfile(sub_src.folder,sub_src.name);
 
         spm('defaults', 'fMRI');
-        coregistration = CoregToMRI_job(src, ref, 'r');
+        coregistration = coreg_job(src, ref);
         spm_jobman('run', coregistration);
 
         % Move files to T1ImgCoreg as defined by DPARSF Toolbox
         targetPath = char(fullfile(base_path, 'T1ImgCoreg', subject));
-        coregisteredDir = dir(fullfile(base_path, 'T1Img', subject, 'r*.nii'));
+        coregisteredDir = dir(fullfile(base_path, 'T1Img', subject, '*.nii'));
         coregisteredFile = fullfile(coregisteredDir.folder, coregisteredDir.name);
         mkdir(targetPath);
-        movefile(coregisteredFile, targetPath);
+        copyfile(coregisteredFile, targetPath);
     end
 %end
